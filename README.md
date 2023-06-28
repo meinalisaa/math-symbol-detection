@@ -1,2 +1,2 @@
 # math-symbol-detection
-Application to perform object detection using Faster R-CNN ResNet50 model trained with TensorFlow Object Detection API. This web-based application do inference from Saved Model, can be open in the browser. Object detected is the prediction symbols with their bounding box.
+This web-based application utilizes the Faster R-CNN ResNet50 model trained with TensorFlow Object Detection API to perform object detection. It operates by performing inference from a Saved Model and can be accessed directly through a web browser. The application identifies objects in images and provides predictions of symbols along with their corresponding bounding boxes.
