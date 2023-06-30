@@ -1,0 +1,589 @@
+item {
+    id: 1
+    name: 'C'
+}
+item {
+    id: 2
+    name: 'bintang'
+}
+item {
+    id: 3
+    name: 'garisStrip'
+}
+item {
+    id: 4
+    name: 'A'
+}
+item {
+    id: 5
+    name: 'T'
+}
+item {
+    id: 6
+    name: 'I'
+}
+item {
+    id: 7
+    name: 'O'
+}
+item {
+    id: 8
+    name: 'N'
+}
+item {
+    id: 9
+    name: 'S'
+}
+item {
+    id: 10
+    name: 'tiga'
+}
+item {
+    id: 11
+    name: 'a'
+}
+item {
+    id: 12
+    name: 'c'
+}
+item {
+    id: 13
+    name: 't'
+}
+item {
+    id: 14
+    name: 'i'
+}
+item {
+    id: 15
+    name: 'o'
+}
+item {
+    id: 16
+    name: 'n'
+}
+item {
+    id: 17
+    name: 's'
+}
+item {
+    id: 18
+    name: 'l'
+}
+item {
+    id: 19
+    name: 'k'
+}
+item {
+    id: 20
+    name: 'e'
+}
+item {
+    id: 21
+    name: 'R'
+}
+item {
+    id: 22
+    name: 'enam'
+}
+item {
+    id: 23
+    name: 'kurungTutup'
+}
+item {
+    id: 24
+    name: 'X'
+}
+item {
+    id: 25
+    name: 'samaDengan'
+}
+item {
+    id: 26
+    name: 'p'
+}
+item {
+    id: 27
+    name: 'q'
+}
+item {
+    id: 28
+    name: 'elemen'
+}
+item {
+    id: 29
+    name: 'satu'
+}
+item {
+    id: 30
+    name: 'kurangDari'
+}
+item {
+    id: 31
+    name: 'nol'
+}
+item {
+    id: 32
+    name: 'koma'
+}
+item {
+    id: 33
+    name: 'dua'
+}
+item {
+    id: 34
+    name: 'lebihDari'
+}
+item {
+    id: 35
+    name: 'oplus'
+}
+item {
+    id: 36
+    name: 'Z'
+}
+item {
+    id: 37
+    name: 'g'
+}
+item {
+    id: 38
+    name: 'm'
+}
+item {
+    id: 39
+    name: 'v'
+}
+item {
+    id: 40
+    name: 'r'
+}
+item {
+    id: 41
+    name: 'G'
+}
+item {
+    id: 42
+    name: 'D'
+}
+item {
+    id: 43
+    name: 'kurungBuka'
+}
+item {
+    id: 44
+    name: 'tambah'
+}
+item {
+    id: 45
+    name: 'kurawalBuka'
+}
+item {
+    id: 46
+    name: 'x'
+}
+item {
+    id: 47
+    name: 'garisTegak'
+}
+item {
+    id: 48
+    name: 'panahKanan'
+}
+item {
+    id: 49
+    name: 'titikTengah'
+}
+item {
+    id: 50
+    name: 'kurawalTutup'
+}
+item {
+    id: 51
+    name: 'kurang'
+}
+item {
+    id: 52
+    name: 'takHingga'
+}
+item {
+    id: 53
+    name: 'hampirSama'
+}
+item {
+    id: 54
+    name: 'F'
+}
+item {
+    id: 55
+    name: 'subset'
+}
+item {
+    id: 56
+    name: 'omega'
+}
+item {
+    id: 57
+    name: 'irisan'
+}
+item {
+    id: 58
+    name: 'garisMiring'
+}
+item {
+    id: 59
+    name: 'superset'
+}
+item {
+    id: 60
+    name: 'gabungan'
+}
+item {
+    id: 61
+    name: 'eta'
+}
+item {
+    id: 62
+    name: 'xi'
+}
+item {
+    id: 63
+    name: 'zeta'
+}
+item {
+    id: 64
+    name: 'b'
+}
+item {
+    id: 65
+    name: 'Y'
+}
+item {
+    id: 66
+    name: 'd'
+}
+item {
+    id: 67
+    name: 'u'
+}
+item {
+    id: 68
+    name: 'garisAtas'
+}
+item {
+    id: 69
+    name: 'j'
+}
+item {
+    id: 70
+    name: 
+        'tidakSamaDengan'
+    }
+item {
+    id: 71
+    name: 'ekuivalen'
+}
+item {
+    id: 72
+    name: 'tilde'
+}
+item {
+    id: 73
+    name: 'lebihDariSamaDengan'
+}
+item {
+    id: 74
+    name: 'f'
+}
+item {
+    id: 75
+    name: 'varphi'
+}
+item {
+    id: 76
+    name: 'titikDua'
+}
+item {
+    id: 77
+    name: 'phi'
+}
+item {
+    id: 78
+    name: 'y'
+}
+item {
+    id: 79
+    name: 'Phi'
+}
+item {
+    id: 80
+    name: 'tau'
+}
+item {
+    id: 81
+    name: 'lingkaranKecil'
+}
+item {
+    id: 82
+    name: 'tandaPetikSatu'
+}
+item {
+    id: 83
+    name: 'h'
+}
+item {
+    id: 84
+    name: 'kurungSikuBuka'
+}
+item {
+    id: 85
+    name: 'kurungSikuTutup'
+}
+item {
+    id: 86
+    name: 'w'
+}
+item {
+    id: 87
+    name: 'H'
+}
+item {
+    id: 88
+    name: 'alpha'
+}
+item {
+    id: 89
+    name: 'beta'
+}
+item {
+    id: 90
+    name: 'z'
+}
+item {
+    id: 91
+    name: 'empat'
+}
+item {
+    id: 92
+    name: 'kali'
+}
+item {
+    id: 93
+    name: 'B'
+}
+item {
+    id: 94
+    name: 'Omega'
+}
+item {
+    id: 95
+    name: 'W'
+}
+item {
+    id: 96
+    name: 'U'
+}
+item {
+    id: 97
+    name: 'titikKoma'
+}
+item {
+    id: 98
+    name: 'E'
+}
+item {
+    id: 99
+    name: 'P'
+}
+item {
+    id: 100
+    name: 'pi'
+}
+item {
+    id: 101
+    name: 'L'
+}
+item {
+    id: 102
+    name: 'K'
+}
+item {
+    id: 103
+    name: 'gamma'
+}
+item {
+    id: 104
+    name: 'epsilon'
+}
+item {
+    id: 105
+    name: 'mu'
+}
+item {
+    id: 106
+    name: 'kappa'
+}
+item {
+    id: 107
+    name: 'leq'
+}
+item {
+    id: 108
+    name: 'V'
+}
+item {
+    id: 109
+    name: 'titikTitik'
+}
+item {
+    id: 110
+    name: 'Gamma'
+}
+item {
+    id: 111
+    name: 'garisPecahan'
+}
+item {
+    id: 112
+    name: 'psi'
+}
+item {
+    id: 113
+    name: 'M'
+}
+item {
+    id: 114
+    name: 'tujuh'
+}
+item {
+    id: 115
+    name: 'lebihDariSamaDenganJuga'
+}
+item {
+    id: 116
+    name: 'lima'
+}
+item {
+    id: 117
+    name: 'atau'
+}
+item {
+    id: 118
+    name: 'Q'
+}
+item {
+    id: 119
+    name: 'kurangDariSamaDenganJuga'
+}
+item {
+    id: 120
+    name: 'garisMiringTerbalik'
+}
+item {
+    id: 121
+    name: 'rho'
+}
+item {
+    id: 122
+    name: 'sigma'
+}
+item {
+    id: 123
+    name: 'parsial'
+}
+item {
+    id: 124
+    name: 'delta'
+}
+item {
+    id: 125
+    name: 'Delta'
+}
+item {
+    id: 126
+    name: 'sembilan'
+}
+item {
+    id: 127
+    name: 'Sigma'
+}
+item {
+    id: 128
+    name: 'kurungSudutBuka'
+}
+item {
+    id: 129
+    name: 'kurungSudutTutup'
+}
+item {
+    id: 130
+    name: 'delapan'
+}
+item {
+    id: 131
+    name: 'akar'
+}
+item {
+    id: 132
+    name: 'theta'
+}
+item {
+    id: 133
+    name: 'lambda'
+}
+item {
+    id: 134
+    name: 'J'
+}
+item {
+    id: 135
+    name: 'Theta'
+}
+item {
+    id: 136
+    name: 'Pi'
+}
+item {
+    id: 137
+    name: 'integral'
+}
+item {
+    id: 138
+    name: 'bukanElemen'
+}
+item {
+    id: 139
+    name: 'dan'
+}
+item {
+    id: 140
+    name: 'tambahKurang'
+}
+item {
+    id: 141
+    name: 'untukSemua'
+}
+item {
+    id: 142
+    name: 'terdapat'
+}
+item {
+    id: 143
+    name: 'titik'
+}
+item {
+    id: 144
+    name: 'panahKananKiri'
+}
+item {
+    id: 145
+    name: 'chi'
+}
+item {
+    id: 146
+    name: 'bukanSubset'
+}
+item {
+    id: 147
+    name: 'Kongruen'
+}
