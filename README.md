@@ -22,7 +22,9 @@ The application is developed as the final thesis project for the Information Tec
 ## How to Install and Use
 
 ### Install
-open command prompt, go to directory, then run `pip install -r requirement.txt`
+1. Open command prompt
+2. Go to directory
+3. Run `pip install -r requirement.txt`
 
 ### Use
 1. Run `python app.py` or `flask run`
