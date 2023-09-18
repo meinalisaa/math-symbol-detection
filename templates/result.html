@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hasil Deteksi Simbol Matematika</title>
+  <link rel="icon" href="{{ url_for('static', filename='logo-usu.png') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='fontawesome/css/all.min.css') }}">
+</head>
+<body>
+<div class="background3">
+  <div class="card-overlay">
+
+    <div id="header-hasil">
+      <div id="navbar-hasil">
+        <a id="link-navbar-hasil" href="{{ url_for('index') }}">
+          <img class="logo-navbar" src="{{ url_for('static', filename='logo-usu.png') }}">
+          <span id="judul-hasil" style="margin-left: 10px;">Hasil Deteksi Simbol</span>
+        </a>
+        <div class="menu-navbar">
+          <button class="btn-navbar" onclick="buttonNavbar(event)">
+            <i class="fas fa-bars icon-navbar"></i>
+          </button>
+          <div id="dropdownContent" class="dropdown-content">
+            <a href="{{ url_for('deteksi') }}">Deteksi</a>
+            <a href="{{ url_for('tutorial') }}">Tutorial</a>
+            <a href="{{ url_for('informasi') }}">Informasi</a>
+          </div>
+        </div> <!-- menu-navbar -->
+      </div> <!-- navbar-hasil -->
+
+      <div id="gambar-hasil">
+        <img src="{{ url_for('serve_image') }}" alt="Hasil Deteksi">  
+      </div> 
+
+      <div id="judul-deskripsi">
+        <h3>Deskripsi Simbol</h3>    
+        <i class="fas fa-chevron-down" onclick="scrollToTable()"></i>    
+      </div>
+    </div> <!-- header-hasil -->
+  </div> <!-- card-overlay -->
+</div> <!-- background1 -->
+
+
+<div id="deskripsi-hasil">
+  {% if detection_results %}
+<table id="detection-result-table">
+  <thead>
+    <tr>
+      <th>No.</th>
+      <th>Simbol</th>
+      <th>Scores</th>
+      <th class="more-info">Gambar</th>
+      <th>Nama</th>
+      <th class="more-info">Latex</th>
+      <th class="more-info">Deskripsi</th>
+      <th class="more-icon">Keterangan</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% set counter = namespace(value=1) %}
+    {% set unique_symbols = [] %}
+    {% for detection in detection_results %}
+      {% set class_value = detection.class %}
+      {% if class_value not in unique_symbols %}
+        {% set _ = unique_symbols.append(class_value) %}
+      {% endif %}
+    {% endfor %}
+    {% for symbol_id in unique_symbols %}
+      {% set symbol_rows = [] %}
+      {% for row in data_row %}
+        {% set row_class = row[0].striptags()|int %}
+        {% if row_class == symbol_id %}
+          {% set _ = symbol_rows.append(row) %}
+        {% endif %}
+      {% endfor %}
+      {% set symbol_detections = [] %}
+      {% for detection in detection_results %}
+        {% if detection.class == symbol_id %}
+          {% set _ = symbol_detections.append(detection) %}
+        {% endif %}
+      {% endfor %}
+      {% set symbol_row = symbol_rows[0] %}
+      <tr>
+        <td>{{ counter.value }}</td>
+        <td>{{ symbol_row[2] }}</td>
+        <td>
+          {% for detection in symbol_detections %}
+            {{ "%.2f" % (detection.score|float * 100) }}{% if not loop.last %}%, {% endif %}
+          {% endfor %}
+          %
+        </td>
+        <td class="more-info"><img src="{{ url_for('static', filename='symbols_fix/' + symbol_row[3]) }}" width="50px" height="50px"></td>
+        <td>{{ symbol_row[4] }}</td>
+        <td class="more-info">{{ symbol_row[8] }}</td>
+        <td class="more-info">
+          {% set multiple_rows = symbol_rows|length > 1 %}
+          {% if multiple_rows %}
+            {% for row in symbol_rows %}
+              Sub Bidang {{ loop.index }}: {{ row[5] }}. <br>
+              Nama : {{ row[4] }}. <br>
+              {{ row[6] }}. <br>
+              Contoh: {{ row[7] }}.{% if not loop.last %}<br><br>{% endif %}
+            {% endfor %}
+          {% else %}
+            {{ symbol_rows[0][5] }}. <br>
+            {{ symbol_rows[0][6] }}. <br>
+            Contoh: {{ symbol_rows[0][7] }}.
+          {% endif %}
+        </td>
+        <td class="more-icon"><button id="modal-icon"><i class="fas fa-search"></i></button></td>
+      </tr>
+      {% set counter.value = counter.value + 1 %}
+    {% endfor %}
+  </tbody>
+</table>
+
+  {% else %}
+    <h3 style="text-align: center; margin-top: 50px;">Tidak ada simbol terdeteksi.</h3>
+  {% endif %}
+  
+</div> <!-- deskripsi-hasil -->
+
+<div id="detect-again">
+  <a href="{{ url_for('deteksi') }}"><button>Deteksi Lagi</button></a>
+</div>
+
+
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div id="modal-content-container">
+      <div id="gambar"></div>
+      <div id="nama"></div>
+      <div id="latex"></div>
+      <div id="deskripsi"></div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  var modal = document.getElementById("myModal");
+  var spans = document.getElementsByClassName("close");
+  var btns = document.getElementsByClassName("more-icon");
+
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function() {
+      var row = this.closest("tr");
+
+      // Get the values from the corresponding table cells
+      var gambarValue = row.querySelector(".more-info img").src;
+      var namaValue = row.querySelector(".more-info + td").textContent.trim();
+      var latexValue = row.querySelector(".more-info + td + td").textContent.trim();
+      var deskripsiValue = row.querySelector(".more-info + td + td + td").textContent.trim();
+
+      // Set the values in the modal content
+      document.getElementById("gambar").innerHTML = "<h3>Deskripsi Simbol</h3><img src='" + gambarValue + "' width='100px' height='100px'>";
+      document.getElementById("nama").innerHTML = "<b>Nama</b> : " + namaValue;
+      document.getElementById("latex").innerHTML = "<b>Latex</b> : " + latexValue;
+      document.getElementById("deskripsi").innerHTML = "<br><b>Deskripsi</b><br>" + deskripsiValue;
+
+      modal.style.display = "block";
+      modal.style.textAlign = "justify";
+    });
+  }
+
+  for (var i = 0; i < spans.length; i++) {
+    spans[i].addEventListener("click", function() {
+      modal.style.display = "none";
+    });
+  }
+
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  };
+
+  function scrollToTable() {
+    const table = document.getElementById('detection-result-table');
+    table.scrollIntoView({ behavior: 'smooth' });
+  }
+</script>
+
+
+</body>
+</html>

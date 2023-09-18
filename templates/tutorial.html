@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Tutorial Penggunaan Aplikasi Deteksi</title>
+	<link rel="icon" href="{{ url_for('static', filename='logo-usu.png') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='fontawesome/css/all.min.css') }}">
+</head>
+<body>
+
+
+<div class="background1">
+  <div class="card-overlay">
+  	<div class="container-tutor">
+  		<h1>
+  			<a href="{{ url_for('index') }}" style="text-decoration: none; color: white">
+  				<i class="fas fa-chevron-left"></i>
+  			</a>
+  			<span style="padding: 5px;"></span>
+  			Tutorial Penggunaan Aplikasi Deteksi Simbol Matematika
+  		</h1>
+  	</div>
+  </div>
+</div>
+
+<div class="container-tutor">
+	<div class="steps-tutor">
+		<h3>Langkah 1</h3>
+		<p>Buka aplikasi Deteksi Simbol Matematika. Saat membuka aplikasi, halaman utama yang muncul adalah sebagai berikut. Pada halaman utama terdapat tombol Mulai Deteksi yang akan langsung mengarahkan ke halaman deteksi aplikasi. Pada halaman utama juga terdapat beberapa menu halaman seperti Deteksi, Tutorial, dan Informasi.</p>
+		<img class="img-tutor" src="{{ url_for('static', filename='tutorial/1-beranda.png') }}">
+	</div>
+	<div class="steps-tutor">
+		<h3>Langkah 2</h3>
+		<p>Setelah meng-<i>click</i> tombol Mulai Deteksi, maka halaman akan berpindah ke halaman deteksi sebagai berikut. Pada halaman deteksi, terdapat beberapa tombol yaitu Upload Gambar, Foto Kamera, dan Deteksi.</p>
+		<img class="img-tutor" src="{{ url_for('static', filename='tutorial/2-inputDeteksi.png') }}">
+		<p>Tombol Upload Gambar dan Foto Kamera digunakan untuk memasukkan <i>input</i> ke dalam aplikasi. Tombol Upload Gambar akan mengarahkan ke jendela file sehingga pengguna dapat memilih file gambar. Sedangkan tombol Foto Kamera akan menghidupkan kamera dari <i>device</i> pengguna. Keduanya akan terlihat seperti berikut.</p>
+		<img class="img-tutor1" src="{{ url_for('static', filename='tutorial/3-inputKamera.png') }}">
+		<span class="divider"></span>
+		<img class="img-tutor1" src="{{ url_for('static', filename='tutorial/4-inputFile.png') }}">
+		<p>Setelah itu pengguna dapat meng-<i>click</i> tombol Deteksi untuk melihat hasil deteksi terhadap gambar yang sudah dimasukkan. Akan muncul tampilan loading yang menandakan bahwa proses deteksi sedang dilakukan.</p>
+		<img class="img-tutor" src="{{ url_for('static', filename='tutorial/5-loadingDeteksi.png') }}">
+	</div>
+	<div class="steps-tutor">
+		<h3>Langkah 3</h3>
+		<p>Setelah proses deteksi selesai, maka halaman akan berpindah ke halaman hasil deteksi. Pada halaman ini ditampilkan gambar yang sudah dideteksi dengan menggambarkan <i>bounding box</i>-nya yang berisi simbol.</p>
+		<img class="img-tutor" src="{{ url_for('static', filename='tutorial/6-hasilDeteksi1.png') }}">
+		<p>Hasil deteksi juga dilengkapi dengan deskripsi dari tiap-tiap simbol yang terdapat pada gambar. Pada deskripsi diberikan informasi mengenai bentuk simbol tersebut, nama dari simbol tersebut, sub bidang, keterangan, dan contoh penggunaan dari simbol.</p>
+		<img class="img-tutor" src="{{ url_for('static', filename='tutorial/7-hasilDeteksi2.png') }}">
+	</div>
+</div>
+
+</body>
+</html>

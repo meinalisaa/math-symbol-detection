@@ -1,0 +1,138 @@
+symbol_id	symbol_name	symbol_char	symbol_icon	reading	subfield	description	example	in_latex	in_html
+88	 alpha	"&alpha;"	alpha.jpg	alfa	Huruf Yunani	Huruf Yunani alpha (huruf kecil)	"&alpha;"	\alpha	"&alpha;"
+88	 alpha	"&alpha;"	alpha.jpg	alfa	Geometri	Variabel untuk sudut	"&alpha; = 45&deg;"	\alpha	"&alpha;"
+2	 ast	*	ast.jpg	Bintang	Matematika Dasar	Perkalian	2 * 3 = 6	\ast	*
+120	 backslash	\	backslash.jpg	Garis Miring Terbalik	Himpunan	"Komplemen relatif yaitu objek-objek yang termasuk dalam A dan tidak termasuk dalam B. A \ B = {x | x &isin; A dan x &notin; B}."	"A = {1, 2, 3, 4, 5}; B = {3, 4, 5, 6}; A \ B ={1, 2}"	\backslash	\
+89	 beta	"&beta;"	beta.jpg	beta	Huruf Yunani	Huruf Yunani beta (huruf kecil)	"&beta;"	\beta	"&beta;"
+89	 beta	"&beta;"	beta.jpg	beta	Geometri	Variabel untuk sudut	"&beta; = 60&deg;"	\beta	"&beta;"
+84	 BigLeftPar	[	BigLeftPar.jpg	Kurung Siku Kiri	Matematika Dasar	Perhitungan di dalam kurung dilakukan terlebih dahulu	"[(1+2) &times;(1+5)] = 18"	[ atau \lbrack	[
+84	 BigLeftPar	[	BigLeftPar.jpg	Kurung Siku Kiri	Aljabar Linier	Pembatas matriks bilangan	"[ 1 2 ; 5 7 ]"	[ atau \lbrack	[
+85	 BigRightPar	]	BigRightPar.jpg	Kurung Siku Kanan	Matematika Dasar	Perhitungan di dalam kurung dilakukan terlebih dahulu	"[(1+2) &times;(1+5)] = 18"	] atau \rbrack	]
+85	 BigRightPar	]	BigRightPar.jpg	Kurung Siku Kanan	Aljabar Linier	Pembatas matriks bilangan	"[ 1 2 ; 5 7 ]"	] atau \rbrack	]
+57	 cap	"&cap;"	cap.jpg	Irisan	Himpunan	Irisan, objek yang termasuk dalam himpunan A dan himpunan B	"A &cap; B = {9,14}"	\cap	"&cap;"
+57	 cap	"&cap;"	cap.jpg	Irisan	Probabilitas Dan Statistik	Probabilitas dari irisan dua atau lebih peristiwa	"P(A&cap;B) = 0.5"	\cap	"&cap;"
+49	 cdot	?	cdot.jpg	Titik Tengah	Matematika Dasar	Perkalian	2 ? 3 = 6	\cdot	?
+145	 chi	"&chi;"	chi.jpg	chi	Huruf Yunani	Huruf Yunani chi (huruf kecil)	"&chi;"	\chi	"&chi;"
+145	 chi	"&chi;"	chi.jpg	chi	Probabilitas Dan Statistik	Chi-square distribution	"&chi; 2(k), f (x) = xk/2-1e-x/2 / ( 2k/2 &gamma;(k/2) )"	\chi	"&chi;"
+81	 circ	"&SmallCircle;"	circ.jpg	Fungsi komposisi	Aljabar	Fungsi komposisi	"(f &SmallCircle; g) (x) = f (g(x)), f (x)=3x,g(x)=x-1  &rarr;(f &SmallCircle; g)(x)=3(x-1)"	\circ	"&SmallCircle;"
+81	 circ	"&SmallCircle;"	circ.jpg	Derajat	Geometri	"1 putaran = 360&deg;"	"&alpha; = 60&deg;"	\circ	"&SmallCircle;"
+76	 colon	:	colon.jpg	Titik Dua	Matematika Dasar	Pembagian	6 / 2 = 3	:	:
+32	 comma	,	comma.jpg	Koma	Matematika Dasar	Pemisah element dalam daftar, himpunan, urutan, dll	(1, 2, 3), {a, b, c}	,	,
+32	 comma	,	comma.jpg	Koma	Matematika Dasar	Pemisah bilangan bulat dengan desimal	3,14159..	,	,
+147	 cong	"&TildeFullEqual;"	cong.jpg	Kongruen	Geometri	Kesetaraan bentuk dan ukuran geometri, berarti bahwa dua kategori sama, hingga isomorfisme.	"&Delta;ABC &TildeFullEqual; &Delta;XYZ"	\cong	"&TildeFullEqual;"
+60	 cup	"&cup;"	cup.jpg	Gabungan	Himpunan	Gabungan, objek yang termasuk dalam himpunan A atau himpunan B	"A &cup; B = {3,7,9,14,28}"	\cup	"&cup;"
+60	 cup	"&cup;"	cup.jpg	Gabungan	Probabilitas Dan Statistik	Probabilitas dari gabungan dua atau lebih peristiwa	"P(A &cup;B) = 0.5"	\cup	"&cup;"
+124	 delta	"&delta;"	delta.jpg	delta	Huruf Yunani	Huruf Yunani delta (huruf kecil)	"&delta;"	\delta	"&delta;"
+125	 Delta	"&Delta;"	DeltaU.jpg	Delta (kapital)	Huruf Yunani	Huruf Yunani Delta (huruf Kapital)	"&Delta;"	\Delta	"&Delta;"
+125	 Delta	"&Delta;"	DeltaU.jpg	Delta (kapital)	Aljabar	Diskriminan	"&Delta; = b2 - 4ac"	\Delta	"&Delta;"
+125	 Delta	"&Delta;"	DeltaU.jpg	Delta (kapital)	Aljabar	Perubahan atau selisih	"&Delta;t = t1 - t0"	\Delta	"&Delta;"
+125	 Delta	"&Delta;"	DeltaU.jpg	Delta (kapital)	Geometri	Bentuk segitiga	"&Delta;ABC&TildeFullEqual; &Delta;BCD"	\Delta	"&Delta;"
+143	 dot	.	dot.jpg	Titik	Matematika Dasar	Simbol yang digunakan untuk memisahkan bagian bulat dan bagian desimal dalam representasi angka desimal. 	2.56 = 2+56/100	.	.
+104	 epsilon	"&epsilon;"	epsilon.jpg	epsilon	Huruf Yunani	Huruf Yunani epsilon (huruf kecil)	"&epsilon;"	\epsilon	"&epsilon;"
+104	 epsilon	"&epsilon;"	epsilon.jpg	epsilon	Kalkulus	Merepresentasikan angka yang sangat kecil, mendekati 0	"&epsilon; &rarr; 0"	\epsilon	"&epsilon;"
+25	 equal	=	equal.jpg	Sama dengan	Matematika Dasar	Melambangkan kesetaraan atau kesamaan nilai	5 = 2+3	=	=
+71	 equiv	"&equiv;"	equiv.jpg	Ekuivalen	Aljabar, Teori Bilangan	Melambangkan kesetaraan atau bersifat identik	"sin&and;2(x) + cos&and;2(x) &equiv; 1"	\equiv	"&equiv;"
+61	 eta	"&eta;"	eta.jpg	eta	Huruf Yunani	Huruf Yunani eta (huruf kecil)	"&eta;"	\eta	"&eta;"
+142	 exists	"&exist;"	exists.jpg	Terdapat	Logika	"kuantifikasi eksistensial adalah jenis kuantifer, konstanta logika yang ditafsirkan sebagai ""ada"", ""setidaknya ada satu"", atau ""untuk beberapa""."	"&exist;x &isin; S, P(x)"	\exists	"&exist;"
+141	 forall	" &forall;"	forall.jpg	Untuk Semua	Logika	kuantifikasi semesta atau kuantifikasi universal, adalah suatu predikat dari sifat atau relasi untuk setiap anggota domain. 	" &forall;x &isin; R, x > 0"	\forall	" &forall;"
+111	 fractionalLine	"&#8212;"	fractionalLine.jpg	Garis Pecahan	Matematika Dasar	Pembagian atau garis pecahan, sisi atas adalah pembilang dan sisi bawah adalah penyebut	"&#8531;, &frac38;, &frac56;"	\frac{abc}{xyz}	"&#8212;"
+103	 gamma	"&gamma;"	gamma.jpg	gamma	Huruf Yunani	Huruf Yunani gamma (huruf kecil)	"&gamma;"	\gamma	"&gamma;"
+103	 gamma	"&gamma;"	gamma.jpg	gamma	Geometri	Variabel untuk sudut	"&gamma; = 120&deg;"	\gamma	"&gamma;"
+103	 gamma	"&gamma;"	gamma.jpg	gamma	Aljabar	Konstanta Euler-Mascheroni 	"&gamma; = 0.5772156649..."	\gamma	"&gamma;"
+110	 Gamma	"&Gamma;"	GammaU.jpg	Gamma (kapital)	Huruf Yunani	Huruf Yunani Gamma (huruf Kapital)	"&Gamma;"	\Gamma	"&Gamma;"
+73	 geq	"&geq;"	geq.jpg	Lebih dari atau sama dengan	Matematika Dasar	"x &geq; y berarti x lebih dari atau sama dengan y"	"5 &geq; 4"	\geq atau \ge	"&geq;"
+115	 geqq	"&GreaterFullEqual;"	geqq.jpg	Lebih dari atau sama dengan juga	Matematika Dasar	"x &GreaterFullEqual; y berarti x lebih dari atau sama dengan y"	"7 &GreaterFullEqual; 4+2"	\geqq	"&GreaterFullEqual;"
+34	 greater	>	greater.jpg	Lebih dari	Matematika Dasar	x > y berarti x lebih dari y	5 > 4	>	>
+3	 hyphen	-	hyphen.jpg	Garis Rentang/Sampai	Matematika Dasar	Notasi selang untuk menunjukkan rentang nilai antara dua angka	2022-2025	-	-
+28	 in	"&isin;"	in.jpg	Anggota/Elemen	Himpunan	"a&isin;A, elemen dari, termasuk dalam, keanggotaan himpunan"	"A={3,9,14}, 3 &isin; A"	\in	"&isin;"
+52	 infty	"&infin;"	infty.jpg	Tak Terhingga	Aljabar, Kalkulus	Simbol yang digunakan untuk mewakili konsep tak terhingga atau tanpa batas	"lim(x  &rarr; &infin;) f(x)"	\infty	"&infin;"
+137	 int	"&int;"	int.jpg	Integral	Kalkulus	Integral yaitu operasi matematika yang merupakan kebalikan atau operasi terbalik dari turunan.	"&int; f(x)dx"	\int	"&int;"
+106	 kappa	"&kappa;"	kappa.jpg	kappa	Huruf Yunani	Huruf Yunani kappa (huruf kecil)	"&kappa;"	\kappa	"&kappa;"
+133	 lambda	"&lambda;"	lambda.jpg	lambda	Huruf Yunani	Huruf Yunani lambda (huruf kecil)	"&lambda;"	\lambda	"&lambda;"
+133	 lambda	"&lambda;"	lambda.jpg	lambda	Probabilitas Dan Statistik	Gamma distribution, Exponential distribution, Poisson distribution	"gamma(c, &lambda;), exp(&lambda;), Poisson(&lambda;)"	\lambda	"&lambda;"
+128	 langle	<	langle.jpg	Kurung Sudut Kiri	Aljabar Linier	Inner product, operasi untuk menghasilkan bilangan skalar	<x, y>	\langle	<
+109	 ldots	...	dots.jpg	Titik-Titik Panjang	Matematika Dasar	Menunjukkan kelanjutan atau perluasan dari sesuatu tanpa memberikan rincian lengkap.	1, 2, 3, ..., 10	\ldots	...
+43	 LeftPar	(	LeftPar.jpg	Kurung Kiri/Kurung Buka	Matematika Dasar	Perhitungan di dalam kurung dilakukan terlebih dahulu	"2  &times; (3+5) = 16"	(	(
+43	 LeftPar	(	LeftPar.jpg	Kurung Kiri/Kurung Buka	Aljabar Linier	Pembatas matriks bilangan	"( 1 2 ; 5 7 )"	(	(
+144	 Leftrightarrow	"&harr;"	Leftrightarrow.jpg	Biimplikasi/… Jika dan Hanya Jika …	Logika	A benar jika dan hanya jika B benar. Artinya, A dan B memiliki Hubungan yang saling mempengaruhi sehingga keduanya benar atau keduanya salah.	"C &harr; D"	\leftrightarrow	"&harr;"
+144	 Leftrightarrow	"&harr;"	Leftrightarrow.jpg	Garis infiniti	Geometri	Garis yang tidak terbatas/infinite		\leftrightarrow	"&harr;"
+107	 leq	"&leq;"	leq.jpg	Kurang dari atau sama dengan	Matematika Dasar	"x &leq; y berarti x kurang dari atau sama dengan y"	"4 &leq; 5"	\leq atau \le	"&leq;"
+119	 leqq	"&LessFullEqual;"	leqq.jpg	Kurang dari atau sama dengan juga	Matematika Dasar	"x &LessFullEqual; y berarti x kurang dari atau sama dengan y"	"5 &LessFullEqual; 5"	\leqq	"&LessFullEqual;"
+30	 less	<	less.jpg	Kurang dari	Matematika Dasar	x < y berarti x kurang dari y	4 < 5	<	<
+45	 MiddleLeftPar	{	MiddleLeftPar.jpg	Kurung Kurawal Kiri	Matematika Dasar	Perhitungan di dalam kurung dilakukan terlebih dahulu	"{(1+2) &times;(1+5)} = 18"	\{ atau \lbrace	{
+45	 MiddleLeftPar	{	MiddleLeftPar.jpg	Kurung Kurawal Kiri	Himpunan	Himpunan yang berisi kumpulan dari elemen-elemen	A = {3,7,9,14}, B = {9,14,28}	\{ atau \lbrace	{
+50	 MiddleRightPar	}	MiddleRightPar.jpg	Kurung Kurawal Kanan	Matematika Dasar	Perhitungan di dalam kurung dilakukan terlebih dahulu	"{(1+2) &times;(1+5)} = 18"	\} atau \rbrace	}
+50	 MiddleRightPar	}	MiddleRightPar.jpg	Kurung Kurawal Kanan	Himpunan	Himpunan yang berisi kumpulan dari elemen-elemen	A = {3,7,9,14}, B = {9,14,28}	\} atau \rbrace	}
+51	 minus	-	minus.jpg	Kurang	Matematika Dasar	Pengurangan	2 - 1 = 1	-	-
+51	 minus	-	minus.jpg	Negatif	Matematika Dasar	Menyatakan bilangan negatif	-16	-	-
+51	 minus	-	minus.jpg	Himpunan Komplemen	Himpunan	A - B berarti himpunan yang mempunyai semua anggota dari A yang tidak terdapat pada B.	"A = {1, 2, 3, 4}; B = {2, 4, 6}; A-B = {1, 3}"	-	-
+51	 minus	-	minus.jpg	Garis Rentang/Sampai	Matematika Dasar	Notasi selang untuk menunjukkan rentang nilai antara dua angka	2022-2025	-	-
+105	 mu	"&mu;"	mu.jpg	mu	Huruf Yunani	Huruf Yunani mu (huruf kecil)	"&mu;"	\mu	"&mu;"
+105	 mu	"&mu;"	mu.jpg	mu	Probabilitas Dan Statistik	Rata-rata populasi, rata-rata nilai dalam populasi	"&mu; = 10"	\mu	"&mu;"
+105	 mu	"&mu;"	mu.jpg	mu	Probabilitas Dan Statistik	Normal distribution, Gaussian distribution	"N(&mu;,&sigma;2), X ~ N(0,3)"	\mu	"&mu;"
+70	 notequal	"&ne;"	notequal.jpg	Tidak sama dengan	Matematika Dasar	Melambangkan nilai yang tidak sama atau tidak setara	"5 &ne; 4"	\neq atau \ne	"&ne;"
+138	 notin	"&notin;"	notin.jpg	Bukan Anggota/Elemen	Himpunan	"x&notin;A, bukan elemen dari, tidak termasuk dalam, tidak ada keanggotaan himpunan"	"A={3,9,14}, 1 &notin; A"	\notin	"&notin;"
+146	 notsubset	" &nsub;"	notsubset.jpg	Bukan Himpunan Bagian/Subset	Himpunan	Himpunan sebelah kiri bukan merupakan himpunan bagian dari himpunan sebelah kanan	"{9,66}  &nsub; {9,14,28}"	\not\subset	" &nsub;"
+117	 nu	" &or;"	nu.jpg	Disjungsi/Atau	Logika	"Melambangkan operasi logika ""atau"" antara dua pernyataan atau kondisi"	"x  &or; y"	\vee	" &or;"
+56	 omega	"&omega;"	omega.jpg	omega	Huruf Yunani	Huruf Yunani omega (huruf kecil)	"&omega;"	\omega	"&omega;"
+56	 omega	"&omega;"	omega.jpg	omega	Himpunan, Logika	Bilangan ordinal tak terhingga terkecil, memiliki sifat bahwa setiap bilangan ordinal yang lebih kecil darinya adalah bilangan ordinal terbatas.	" &forall;n &isin; N (n < &omega;)"	\omega	"&omega;"
+94	 Omega	"&Omega;"	OmegaU.jpg	Omega (kapital)	Huruf Yunani	Huruf Yunani Omega (huruf Kapital)	"&Omega;"	\Omega	"&Omega;"
+35	 oplus	"&oplus;"	oplus.jpg	Eksklusif OR	Logika	XOR adalah operasi logika yang menghasilkan nilai benar hanya jika terdapat perbedaan antara pernyataan atau kondisi yang terlibat.	"x &oplus; y"	\oplus	"&oplus;"
+123	 partial	"&part;"	partial.jpg	Parsial/Del	Kalkulus	Mewakili turunan parsial dalam matematika	"f(x, y) = x&and;2 + 2xy, maka &part;f/&part;x"	\partial	"&part;"
+77	 phi	"&phi;"	phi.jpg	phi	Huruf Yunani	Huruf Yunani phi (huruf kecil)	"&phi;"	\phi	"&phi;"
+77	 phi	"&phi;"	phi.jpg	phi	Huruf Yunani	Konstanta rasio emas (golden ratio constant)	"a / b = &phi;"	\phi	"&phi;"
+79	 Phi	"&Phi;"	PhiU.jpg	Phi (kapital)	Huruf Yunani	Huruf Yunani Phi (huruf Kapital)	"&Phi;"	\Phi	"&Phi;"
+100	 pi	"&pi;"	pi.jpg	pi	Huruf Yunani	Huruf Yunani pi (huruf kecil)	"&pi;"	\pi	"&pi;"
+100	 pi	"&pi;"	pi.jpg	pi	Geometri, Aljabar	"Konstanta Archimedes. &pi; = 3.141592654.., rasio antara keliling dan diameter suatu lingkaran"	"c = &pi;?d = 2?&pi;?r"	\pi	"&pi;"
+136	 Pi	"&Pi;"	PiU.jpg	Pi (kapital)	Huruf Yunani	Huruf Yunani Pi (huruf Kapital)	"&Pi;"	\Pi	"&Pi;"
+136	 Pi	"&Pi;"	PiU.jpg	Pi (kapital)	Aljabar, Kalkulus	Produk - hasil kali dari semua nilai dalam rentang serangkaian bilangan	"&Pi; xi=x1 &sdot;x2 &sdot;... &sdot;xn"	\Pi	"&Pi;"
+44	 plus	+	plus.jpg	Tambah	Matematika Dasar	Penjumlahan 	1 + 1 = 2	+	+
+44	 plus	+	plus.jpg	Himpunan Gabungan	Himpunan	A1 + A2 berarti disjoint union himpunan A1 dan A2.	"A = {1, 2}; B = {2, 5, 6}; A+B = {1, 2, 5, 6}"	+	+
+140	 pm	"&plusmn;"	pm.jpg	Tambah Kurang	Matematika Dasar	Operasi penjumlahan dan pengurangan, mencakup keduanya	"3 &plusmn; 5 = 8 or -2"	\pm	"&plusmn;"
+82	 prime	'	prime.jpg	Arcminute	Geometri	"Arcminute (simbol: ') adalah satuan sudut yang digunakan dalam pengukuran sudut. Arcminute, 1&deg; = 60'"	"&alpha; = 60&deg;59'"	' atau \prime	'
+82	 prime	'	prime.jpg	Arcsecond	Geometri	Arcsecond (simbol: '') adalah satuan sudut yang lebih kecil dibandingkan dengan arcminute. Satu arcminute (') sama dengan 60 arcsecond (''). Arcsecond, 1' = 60''	"&alpha; = 60&deg;59'59''"	' atau \prime	'
+82	 prime	'	prime.jpg	Bukan	Logika	Menyatakan negasi - bukan	x'	' atau \prime	'
+82	 prime	'	prime.jpg	Turunan	Kalkulus	Menyatakan turunan - notasi Lagrange's 	(3x3)' = 9x2	' atau \prime	'
+112	 psi	"&psi;"	psi.jpg	psi	Huruf Yunani	Huruf Yunani psi (huruf kecil)	"&psi;"	\psi	"&psi;"
+129	 rangle	>	rangle.jpg	Kurung Sudut Kanan	Aljabar Linier	Inner product, operasi untuk menghasilkan bilangan skalar	<x, y>	\rangle	>
+121	 rho	"&rho;"	rho.jpg	rho	Huruf Yunani	Huruf Yunani rho (huruf kecil)	"&rho;"	\rho	"&rho;"
+121	 rho	"&rho;"	rho.jpg	rho	Probabilitas Dan Statistik	Korelasi antara variabel acak X dan Y	"&rho;X,Y = 0.6"	\rho	"&rho;"
+48	 rightarrow	"&rarr;"	rightarrow.jpg	Implikasi/Jika … Maka ...	Logika	Implikasi. Relasi yang menyatakan bahwa jika pernyataan pertama terjadi maka pernyataan kedua terjadi	"A &rarr; B"	\rightarrow atau \to	"&rarr;"
+48	 rightarrow	"&rarr;"	rightarrow.jpg	Garis AB	Geometri	Garis yang dimulai dari titik A, garis AB		\rightarrow atau \to	"&rarr;"
+48	 rightarrow	"&rarr;"	rightarrow.jpg	Vektor	Kalkulus	Vektor AB adalah vektor yang menghubungkan dua titik A dan B dalam ruang. 		\rightarrow atau \to	"&rarr;"
+23	 RightPar	)	RightPar.jpg	Kurung Kanan/Kurung Tutup	Matematika Dasar	Perhitungan di dalam kurung dilakukan terlebih dahulu	"2  &times; (3+5) = 16"	)	)
+23	 RightPar	)	RightPar.jpg	Kurung Kanan/Kurung Tutup	Aljabar Linier	Pembatas matriks bilangan	"( 1 2 ; 5 7 )"	)	)
+97	 semicolon	";"	semicolon.jpg	Titik Koma	Matematika Dasar	Memisahkan pernyataan atau ekspresi	"x + y = 5; 2x - y = 3"	";"	";"
+97	 semicolon	";"	semicolon.jpg	Titik Koma	Matematika Dasar	Notasi himpunan untuk memisahkan kondisi atau properti dari variabel dalam notasi pembangun himpunan	"{x ; x > 0} "	";"	";"
+122	 sigma	"&sigma;"	sigma.jpg	sigma	Huruf Yunani	Huruf Yunani sigma (huruf kecil)	"&sigma;"	\sigma	"&sigma;"
+122	 sigma	"&sigma;"	sigma.jpg	sigma	Probabilitas Dan Statistik	Varian dari nilai-nilai populasi	"&sigma;2 = 4"	\sigma	"&sigma;"
+122	 sigma	"&sigma;"	sigma.jpg	sigma	Probabilitas Dan Statistik	Nilai simpangan baku (standard deviation) dari variabel acak X	"&sigma;X = 2"	\sigma	"&sigma;"
+127	 Sigma	"&Sigma;"	SigmaU.jpg	Sigma (kapital)	Huruf Yunani	Huruf Yunani Sigma (huruf Kapital)	"&Sigma;"	\Sigma	"&Sigma;"
+127	 Sigma	"&Sigma;"	SigmaU.jpg	Sigma (kapital)	Aljabar, Probabilitas Dan Statistik, Kalkulus	Penjumlahan - jumlah dari semua nilai dalam rentang serangkaian bilangan	"&Sigma; xi= x1+x2+...+xn"	\Sigma	"&Sigma;"
+53	 simeq	"&TildeEqual;"	simeq.jpg	Hampir sama dengan	Teori Bilangan, Probabilitas Dan Statistik, Analisis	Setara secara asimtotik	"P(X=x) &TildeEqual; f(x)"	\simeq	"&TildeEqual;"
+58	 slash	/	slash.jpg	Garis Miring	Matematika Dasar	Pembagian	6 / 2 = 3	/	/
+131	 sqrt	" &radic;"	sqrt.jpg	Akar Kuadrat	Matematika Dasar	"akar, akar kuadrat  &radic;a ?  &radic;a  = a, akar n &radic;a"	" &radic;9 = &plusmn;3"	\surd , \sqrt{abc} , \sqrt[n]{abc}	" &radic;"
+55	 subset	"&sub;"	subset.jpg	Himpunan Bagian/Subset	Himpunan	Himpunan bagian, A adalah subset dari B. Set A termasuk dalam set B.	"{9,14} &sub; {9,14,28}"	\subset	"&sub;"
+59	 supset	"&sup;"	supset.jpg	Himpunan Induk/Superset	Himpunan	Himpunan induk, A adalah superset dari B. Set A memuat set B.	"{9,14,28} &sup; {9,14}"	\supset	"&sup;"
+80	 tau	"&tau;"	tau.jpg	tau	Huruf Yunani	Huruf Yunani tau (huruf kecil)	"&tau;"	\tau	"&tau;"
+80	 tau	"&tau;"	tau.jpg	tau	Teori Bilangan, Graf, Komputer Sains	Konstanta Prouhet–Thue–Morse (PTM)	"&tau; = 0.412454033640... "	\tau	"&tau;"
+132	 theta	"&theta;"	theta.jpg	theta	Huruf Yunani	Huruf Yunani theta (huruf kecil)	"&theta;"	\theta	"&theta;"
+132	 theta	"&theta;"	theta.jpg	theta	Geometri	Variabel untuk sudut	"&theta; = 30&deg;"	\theta	"&theta;"
+135	 Theta	"&Theta;"	ThetaU.jpg	Theta (kapital)	Huruf Yunani	Huruf Yunani Theta (huruf Kapital)	"&Theta;"	\Theta	"&Theta;"
+72	 tilde	~	tilde.jpg	Gelombang/Tilde	Probabilitas Dan Statistik	Distribusi variabel acak X	X ~ N(0,3)	\sim	~
+72	 tilde	~	tilde.jpg	Gelombang/Tilde	Aljabar	Menunjukkan hubungan aproksimasi antara dua nilai atau bilangan	11 ~ 10	\sim	~
+72	 tilde	~	tilde.jpg	Ekuivalen dengan	Geometri	Segitiga ABC memiliki bentuk yang sama dengan segitiga XYZ, meskipun ukurannya mungkin berbeda.	"&Delta;ABC ~ &Delta;XYZ"	\sim	~
+72	 tilde	~	tilde.jpg	Negasi	Logika	Menyatakan kebalikan atau negasi	~ x	\sim	~
+92	 times	" &times;"	times.jpg	Kali	Matematika Dasar	Perkalian	"2  &times; 3 = 6"	\times	" &times;"
+92	 times	" &times;"	times.jpg	Produk Kartesian	Himpunan	"Produk Kartesian, himpunan semua pasangan terurut dari A dan B. A &times;B = {(a,b)|a&isin;A , b&isin;B}"	"{1,2}  &times; {3,4} = {(1,3),(1,4),(2,3),(2,4)}"	\times	" &times;"
+75	 varphi	"&varphi;"	varphi.jpg	varphi	Aljabar	Huruf Yunani varphi (huruf kecil)	"&varphi;"	\varphi	"&varphi;"
+75	 varphi	"&varphi;"	varphi.jpg	varphi	Huruf Yunani	Konstanta rasio emas (golden ratio constant)	"a / b = &varphi;"	\varphi	"&varphi;"
+47	 vert	|	vert.jpg	Garis Tegak	Aljabar	Nilai absolut/mutlak	| -5 | = 5	| atau \vert	|
+47	 vert	|	vert.jpg	Determinan	Aljabar Linier	Determinan dari matriks A	| A |	| atau \vert	|
+47	 vert	|	vert.jpg	Kardinalitas	Himpunan	Kardinalitas, yaitu jumlah elemen dari himpunan A	A={3,9,14}, |A|=3	| atau \vert	|
+47	 vert	|	vert.jpg	Dimana	Himpunan	"notasi bacaan ""yang memenuhi"" atau ""dengan syarat"""	A={x|3<x<14}	| atau \vert	|
+47	 vert	|	vert.jpg	Atau	Logika	atau	x | y	| atau \vert	|
+139	 wedge	"&and;"	wedge.jpg	Konjungsi/Dan	Logika	"Melambangkan operasi logika ""dan"" antara dua pernyataan atau kondisi"	"x &and; y"	\wedge	"&and;"
+139	 wedge	"&and;"	wedge.jpg	Pangkat	Matematika Dasar	Bilangan dikalikan dengan bilangan tersebut sebanyak pangkatnya	"2 &and; 3 = 2 &times;2 &times;2 = 8"	\wedge	"&and;"
+62	 xi	"&chi;"	xi.jpg	ksi	Huruf Yunani	Huruf Yunani xi (huruf kecil)	"&chi;"	\xi	"&chi;"
+63	 zeta	"&zeta;"	zeta.jpg	zeta	Huruf Yunani	Huruf Yunani zeta (huruf kecil)	"&zeta;"	\zeta	"&zeta;"

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Deteksi Simbol Matematika</title>
+	<link rel="icon" href="{{ url_for('static', filename='logo-usu.png') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='fontawesome/css/all.min.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+
+<div id="navbar-deteksi">
+	<a id="link-navbar-deteksi" href="{{ url_for('index') }}">
+		<img id="logo-navbar-deteksi" class="logo-navbar" src="{{ url_for('static', filename='logo-usu.png') }}">
+		<span>Deteksi Simbol Matematika</span>
+	</a>
+</div>
+
+<div class="background2">
+	<div class="card-overlay">
+
+	    <div id="wrapper-btn-deteksi">
+	      <div id="uploadSection">
+	        <input type="file" id="inputUpload" name="image" style="display: none;">
+	        <button id="inputButton" class="button-deteksi" onclick="inputUploadClick();">
+	          <i class="fas fa-file-upload"></i>
+	          <span>Upload<br> Gambar</span>
+	        </button>
+	      </div>
+
+	      <div id="cameraSection">
+	        <button class="button-deteksi" id="openButton">
+	          <i class="fas fa-camera"></i>
+	          <span>Foto<br> Camera</span>
+	        </button>
+
+	        <button class="button-deteksi" id="captureButton" style="display: none; margin: auto;">
+	          <i class="fas fa-camera"></i>
+	          <span>Ambil<br> Foto</span>
+	        </button>
+
+	        <button class="button-deteksi" id="retakeButton" style="display: none; margin: auto;">
+	          <i class="fas fa-camera"></i>
+	          <span>Ganti<br> Foto</span>
+	        </button>
+	      </div>  
+
+	      <button id="deteksi" class="button-deteksi" onclick="detectSymbol();">
+	        <i class="fas fa-search"></i>
+	        <span>Deteksi</span>
+	      </button>
+	    </div> <!-- wrapper-btn-deteksi -->
+
+	    <div id="wrapper-canvas">
+		    <div class="canvas-container">
+		      <p id="canvas-container-text">Silahkan memasukkan input gambar</p>
+		      <canvas id="cameraCanvas" style="display: none;"></canvas>
+		      <canvas id="uploadCanvas" style="display: none;"></canvas> 
+      		  <img id="imageElement" alt="Gambar" style="display: none; margin: auto;">
+		      <video id="videoElement" autoplay style="display: none; margin: auto;"></video>
+		    </div>
+
+			<div id="loadingDiv">
+			  <img id="loadingGif" src="{{ url_for('static', filename='load.gif') }}" style="margin:auto; width: 150px;">
+			</div>
+	    </div> <!-- wrapper-canvas -->
+
+
+
+
+
+  <script type="text/javascript">
+
+    let uploadedImage = null;
+    const canvasText = document.getElementById('canvas-container-text');
+    const inputUpload = document.getElementById('inputUpload');
+    const uploadCanvas = document.getElementById('uploadCanvas');
+    const inputContext = uploadCanvas.getContext('2d');
+
+    function inputUploadClick() {
+        canvasText.style.display = 'none';
+        videoElement.style.display = 'none';
+        cameraCanvas.style.display = 'none';
+      console.log("input upload click function");
+      document.getElementById('inputUpload').click();
+    }
+
+	inputUpload.addEventListener('change', async function (e) {
+	  const file = e.target.files[0];
+	  const reader = new FileReader();
+
+	  reader.onload = function (event) {
+	    const img = new Image();
+	    img.onload = function () {
+	      const canvas = document.createElement('canvas');
+	      const ctx = canvas.getContext('2d');
+
+	      let newWidth, newHeight;
+	      const aspectRatio = img.width / img.height;
+	      if (aspectRatio >= 1) {
+	        newWidth = 640;
+	        newHeight = newWidth / aspectRatio;
+	      } else {
+	        newHeight = 360;
+	        newWidth = newHeight * aspectRatio;
+	      }
+
+	      canvas.width = newWidth;
+	      canvas.height = newHeight;
+	      ctx.drawImage(img, 0, 0, newWidth, newHeight);
+	      imageElement.src = canvas.toDataURL();
+	      imageElement.style.display = 'block';
+	      canvas.remove();
+	    };
+	    img.src = event.target.result;
+	  };
+	  reader.readAsDataURL(file);
+	});
+
+    document.addEventListener('DOMContentLoaded', function() {
+      const openButton = document.getElementById('openButton');
+      const captureButton = document.getElementById('captureButton');
+      const retakeButton = document.getElementById('retakeButton');
+      const videoElement = document.getElementById('videoElement');
+      const cameraCanvas = document.getElementById('cameraCanvas');
+      const imageElement = document.getElementById('imageElement');
+      let mediaStream;
+      const constraints = { video: { facingMode: 'environment' } };
+
+      function startCamera() {
+        navigator.mediaDevices.getUserMedia(constraints)
+          .then(function(stream) {
+            mediaStream = stream;
+            videoElement.style.display = 'block';
+            videoElement.srcObject = stream;
+            inputUpload.disabled = true;
+            canvasText.style.display = 'none';
+            imageElement.style.display = 'none';
+            openButton.style.display = 'none';
+            captureButton.style.display = 'flex';
+          })
+          .catch(function(error) {
+            console.log('Error accessing camera: ', error);
+          });
+      }
+
+      function captureImage() {
+        imageElement.style.display = 'block';
+        videoElement.style.display = 'none';
+        cameraCanvas.style.display = 'none';
+        cameraCanvas.width = videoElement.videoWidth;
+        cameraCanvas.height = videoElement.videoHeight;
+        const ctx = cameraCanvas.getContext('2d');
+        ctx.drawImage(videoElement, 0, 0, cameraCanvas.width, cameraCanvas.height);
+        imageElement.src = cameraCanvas.toDataURL('image/png');
+        captureButton.style.display = 'none';
+        retakeButton.style.display = 'flex';
+        inputUpload.disabled = false;
+        mediaStream.getTracks()[0].stop();
+      }
+
+      function retakeImage() {
+        inputUpload.disabled = true;
+        imageElement.style.display = 'none';
+        videoElement.style.display = 'block';
+        captureButton.style.display = 'flex';
+        retakeButton.style.display = 'none';
+        mediaStream = null;
+        startCamera();
+      }
+
+      openButton.addEventListener('click', startCamera);
+      captureButton.addEventListener('click', captureImage);
+      retakeButton.addEventListener('click', retakeImage);
+    });
+
+
+    function detectSymbol() {
+      console.log("detection function");
+      const imageFinal = document.getElementById('imageElement');
+      var imgSrc = imageFinal.getAttribute("src");
+
+      if (imgSrc === null || imgSrc === "") {
+        alert("Tidak ada gambar yang bisa dideteksi!");
+      } else {
+        var loadingDiv = document.getElementById("loadingDiv");
+        loadingDiv.style.display = "block";
+
+        const canvas = document.createElement('canvas');
+        const context = canvas.getContext('2d');
+        canvas.width = imageFinal.width;
+        canvas.height = imageFinal.height;
+        context.drawImage(imageFinal, 0, 0);
+        const imageDataURL = canvas.toDataURL('image/jpeg');
+
+        $.ajax({
+          type: 'POST',
+          url: '/inference',
+          data: { image_data: imageDataURL },
+          success: function(response) {
+            console.log('Inference response:', response);
+
+            // Replace the current page content with the received HTML
+            document.open();
+            document.write(response);
+            document.close();
+          },
+          error: function(error) {
+            console.log('Inference error:', error);
+          }
+        });
+      }
+    }
+
+  </script>
+
+</body>
+</html>

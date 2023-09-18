@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Informasi Simbol-Simbol Matematika</title>
+	<link rel="icon" href="{{ url_for('static', filename='logo-usu.png') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='fontawesome/css/all.min.css') }}">
+</head>
+<body>
+
+	<style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+
+
+<div class="background2">
+  <div class="card-overlay">
+  	<div class="container-tutor">
+  		<h1>
+  			<a href="{{ url_for('index') }}" style="text-decoration: none; color: white">
+  				<i class="fas fa-chevron-left"></i>
+  			</a>
+  			<span style="padding: 5px;"></span>
+  			Informasi Simbol-Simbol Matematika
+  		</h1>
+  	</div>
+  </div>
+</div>
+
+<div class="container-tutor">
+
+    <table id="detection-result-table">
+        <thead>
+            <tr>
+                <th>No.</th>
+                <th>Bentuk Simbol</th>
+                <th>Gambar Simbol</th>
+                <th>Tulisan LaTeX</th>
+                <th>Nama/Pembacaan</th>
+                <th>Keterangan</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% set counter = namespace(value=1) %}
+            {% set unique_symbols = [] %}
+            {% for row in data_row[1:] %}
+                {% set symbol_id = row[0] %}
+                {% if symbol_id not in unique_symbols %}
+                    {% set _ = unique_symbols.append(symbol_id) %}
+                    {% set symbol_rows = [] %}
+                    {% for inner_row in data_row[1:] %}
+                        {% if inner_row[0] == symbol_id %}
+                            {% set _ = symbol_rows.append(inner_row) %}
+                        {% endif %}
+                    {% endfor %}
+                    <tr>
+                        <td>{{ counter.value }}</td>
+                        <td>{{ symbol_rows[0][2] }}</td>
+
+                        <td>
+                        	<img src="{{ url_for('static', filename='symbols_fix/' + symbol_rows[0][3]) }}" width="40px" height="40px">
+                        </td>
+                        <td>{{ symbol_rows[0][8] }}</td>
+                        <td>
+                            {% set readings = [] %}
+                            {% for reading_row in symbol_rows %}
+                                {% if reading_row[4] not in readings %}
+                                    {% set _ = readings.append(reading_row[4]) %}
+                                {% endif %}
+                            {% endfor %}
+                            {% for reading in readings %}
+                                {{ reading }}{% if not loop.last %}<br>{% endif %}
+                            {% endfor %}
+                        </td>
+                        <td>
+                            {% for row in symbol_rows %}
+                                Sub bidang: {{ row[5] }}<br>
+                                {{ row[6] }}<br>
+                                Contoh: {{ row[7] }}<br>
+                                {% if not loop.last %}<br>{% endif %}
+                            {% endfor %}
+                        </td>
+                    </tr>
+                    {% set counter.value = counter.value + 1 %}
+                {% endif %}
+            {% endfor %}
+        </tbody>
+    </table>
+
+</div>
+
+</body>
+</html>

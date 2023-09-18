@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Beranda - Deteksi Simbol Matematika</title>
+	<link rel="icon" href="{{ url_for('static', filename='logo-usu.png') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='fontawesome/css/all.min.css') }}">
+</head>
+<body>
+
+<div class="background1">
+	<div class="card-overlay">
+		<div id="header-beranda">
+			<div id="navbar-beranda">
+				<a href="#"><img class="logo-navbar" src="{{ url_for('static', filename='logo-usu.png') }}"></a>
+				<div class="menu-navbar">
+					<button class="btn-navbar" onclick="buttonNavbar(event)">
+						<i class="fas fa-bars icon-navbar"></i>
+					</button>
+					<div id="dropdownContent" class="dropdown-content">
+						<a href="{{ url_for('deteksi') }}">Deteksi</a>
+						<a href="{{ url_for('tutorial') }}">Tutorial</a>
+						<a href="{{ url_for('informasi') }}">Informasi</a>
+					</div>
+				</div> <!-- menu-navbar -->
+			</div> <!-- navbar-beranda -->
+
+			<div id="content-beranda">
+				<h2 id="judul-beranda">
+					Pengenalan Simbol pada Ekspresi Matematika dengan Menggunakan <br>
+					Faster Region Convolutional Neural Network (Faster R-CNN)
+				</h2>
+				<br><a id="mulai-beranda" href="{{ url_for('deteksi') }}">Mulai Deteksi</a>
+			</div> <!-- content-beranda -->
+		</div> <!-- header-beranda -->
+	</div> <!-- card-overlay -->
+</div> <!-- background1 -->
+
+<div id="footer-beranda">
+	<div id="footer-text">
+		<p>Tugas Akhir</p>
+		<p>191402032 - Meina Lisa</p>
+		<p>Program Studi Teknologi Informasi</p>
+		<p>Universitas Sumatera Utara</p>
+		<p><i class="far fa-copyright"></i> 2023</p>
+	</div>
+</div>
+
+<script type="text/javascript">
+function buttonNavbar(event) {
+	event.stopPropagation(); // Prevents the window.onclick event from being triggered immediately
+
+	var dropdownContent = document.getElementById('dropdownContent');
+	dropdownContent.style.display = 'block';
+}
+
+window.onclick = function(event) {
+	if (!event.target.matches('.btn-navbar')) {
+		var dropdownContent = document.getElementById('dropdownContent');
+		dropdownContent.style.display = 'none';
+	}
+}
+</script>
+
+
+</body>
+</html>
